@@ -1,7 +1,0 @@
-/home/awaken/Desktop/sp_vision_tutorial_26/lecture2/build/CMakeFiles/cpp_basics.dir
-/home/awaken/Desktop/sp_vision_tutorial_26/lecture2/build/CMakeFiles/split_channels.dir
-/home/awaken/Desktop/sp_vision_tutorial_26/lecture2/build/CMakeFiles/lightbar_detection.dir
-/home/awaken/Desktop/sp_vision_tutorial_26/lecture2/build/CMakeFiles/fmt_test.dir
-/home/awaken/Desktop/sp_vision_tutorial_26/lecture2/build/CMakeFiles/homework.dir
-/home/awaken/Desktop/sp_vision_tutorial_26/lecture2/build/CMakeFiles/edit_cache.dir
-/home/awaken/Desktop/sp_vision_tutorial_26/lecture2/build/CMakeFiles/rebuild_cache.dir
