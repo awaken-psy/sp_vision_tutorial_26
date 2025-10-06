@@ -24,6 +24,9 @@ add_subdirectory(tasks)
 add_subdirectory(tools)
 
 add_executable(main main.cpp)
+set_target_properties(main PROPERTIES
+    RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}
+)
 add_executable(example io/example.cpp)
 
 target_link_libraries(main ${OpenCV_LIBS} fmt::fmt yaml-cpp tools io auto_aim)
