@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/awaken/Desktop/sp_vision_tutorial_26/build",
+  "command": "/usr/bin/c++  -I/home/awaken/Desktop/sp_vision_tutorial_26/lecture2/part_1 -g -o CMakeFiles/cpp_basics.dir/part_1/cpp_basics.cpp.o -c /home/awaken/Desktop/sp_vision_tutorial_26/lecture2/part_1/cpp_basics.cpp",
+  "file": "/home/awaken/Desktop/sp_vision_tutorial_26/lecture2/part_1/cpp_basics.cpp"
+},
+{
+  "directory": "/home/awaken/Desktop/sp_vision_tutorial_26/build",
+  "command": "/usr/bin/c++  -I/home/awaken/Desktop/sp_vision_tutorial_26/lecture2/part_1 -g -o CMakeFiles/cpp_basics.dir/part_1/tools.cpp.o -c /home/awaken/Desktop/sp_vision_tutorial_26/lecture2/part_1/tools.cpp",
+  "file": "/home/awaken/Desktop/sp_vision_tutorial_26/lecture2/part_1/tools.cpp"
+}
+]

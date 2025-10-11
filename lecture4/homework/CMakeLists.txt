@@ -3,6 +3,7 @@ project(Lesson4)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 find_package(OpenCV REQUIRED)
 find_package(Eigen3 REQUIRED)

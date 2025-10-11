@@ -1,0 +1,3 @@
+/home/awaken/Desktop/sp_vision_tutorial_26/build/CMakeFiles/cpp_basics.dir
+/home/awaken/Desktop/sp_vision_tutorial_26/build/CMakeFiles/edit_cache.dir
+/home/awaken/Desktop/sp_vision_tutorial_26/build/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,57 @@
+[
+{
+  "directory": "/home/awaken/Desktop/sp_vision_tutorial_26/lecture4/homework/build",
+  "command": "/usr/bin/c++ -DFMT_LOCALE -DFMT_SHARED -DOV_THREAD=OV_THREAD_TBB -D_GLIBCXX_USE_CXX11_ABI=1 -I/home/awaken/Desktop/sp_vision_tutorial_26/lecture4/homework -I/home/awaken/Desktop/sp_vision_tutorial_26/lecture4/homework/io/hikrobot/include -isystem /usr/include/eigen3 -isystem /usr/include/opencv4 -isystem /opt/intel/openvino_2024.6.0/runtime/include -Wno-error=deprecated-declarations -std=gnu++17 -o CMakeFiles/main.dir/src/main.cpp.o -c /home/awaken/Desktop/sp_vision_tutorial_26/lecture4/homework/src/main.cpp",
+  "file": "/home/awaken/Desktop/sp_vision_tutorial_26/lecture4/homework/src/main.cpp"
+},
+{
+  "directory": "/home/awaken/Desktop/sp_vision_tutorial_26/lecture4/homework/build",
+  "command": "/usr/bin/c++ -DFMT_LOCALE -DFMT_SHARED -DOV_THREAD=OV_THREAD_TBB -D_GLIBCXX_USE_CXX11_ABI=1 -I/home/awaken/Desktop/sp_vision_tutorial_26/lecture4/homework -I/home/awaken/Desktop/sp_vision_tutorial_26/lecture4/homework/io/hikrobot/include -isystem /usr/include/eigen3 -isystem /usr/include/opencv4 -isystem /opt/intel/openvino_2024.6.0/runtime/include -Wno-error=deprecated-declarations -std=gnu++17 -o CMakeFiles/video.dir/src/video.cpp.o -c /home/awaken/Desktop/sp_vision_tutorial_26/lecture4/homework/src/video.cpp",
+  "file": "/home/awaken/Desktop/sp_vision_tutorial_26/lecture4/homework/src/video.cpp"
+},
+{
+  "directory": "/home/awaken/Desktop/sp_vision_tutorial_26/lecture4/homework/build/io",
+  "command": "/usr/bin/c++  -I/usr/include/eigen3 -I/usr/include/opencv4 -I/home/awaken/Desktop/sp_vision_tutorial_26/lecture4/homework -I/home/awaken/Desktop/sp_vision_tutorial_26/lecture4/homework/io/hikrobot/include -std=gnu++17 -o CMakeFiles/io.dir/hikrobot/hikrobot.cpp.o -c /home/awaken/Desktop/sp_vision_tutorial_26/lecture4/homework/io/hikrobot/hikrobot.cpp",
+  "file": "/home/awaken/Desktop/sp_vision_tutorial_26/lecture4/homework/io/hikrobot/hikrobot.cpp"
+},
+{
+  "directory": "/home/awaken/Desktop/sp_vision_tutorial_26/lecture4/homework/build/io",
+  "command": "/usr/bin/c++  -I/usr/include/eigen3 -I/usr/include/opencv4 -I/home/awaken/Desktop/sp_vision_tutorial_26/lecture4/homework -I/home/awaken/Desktop/sp_vision_tutorial_26/lecture4/homework/io/hikrobot/include -std=gnu++17 -o CMakeFiles/io.dir/camera.cpp.o -c /home/awaken/Desktop/sp_vision_tutorial_26/lecture4/homework/io/camera.cpp",
+  "file": "/home/awaken/Desktop/sp_vision_tutorial_26/lecture4/homework/io/camera.cpp"
+},
+{
+  "directory": "/home/awaken/Desktop/sp_vision_tutorial_26/lecture4/homework/build/tasks",
+  "command": "/usr/bin/c++ -DOV_THREAD=OV_THREAD_TBB -D_GLIBCXX_USE_CXX11_ABI=1 -I/usr/include/eigen3 -I/usr/include/opencv4 -I/home/awaken/Desktop/sp_vision_tutorial_26/lecture4/homework -isystem /opt/intel/openvino_2024.6.0/runtime/include -Wno-error=deprecated-declarations -std=gnu++17 -o CMakeFiles/auto_buff.dir/buff_type.cpp.o -c /home/awaken/Desktop/sp_vision_tutorial_26/lecture4/homework/tasks/buff_type.cpp",
+  "file": "/home/awaken/Desktop/sp_vision_tutorial_26/lecture4/homework/tasks/buff_type.cpp"
+},
+{
+  "directory": "/home/awaken/Desktop/sp_vision_tutorial_26/lecture4/homework/build/tasks",
+  "command": "/usr/bin/c++ -DOV_THREAD=OV_THREAD_TBB -D_GLIBCXX_USE_CXX11_ABI=1 -I/usr/include/eigen3 -I/usr/include/opencv4 -I/home/awaken/Desktop/sp_vision_tutorial_26/lecture4/homework -isystem /opt/intel/openvino_2024.6.0/runtime/include -Wno-error=deprecated-declarations -std=gnu++17 -o CMakeFiles/auto_buff.dir/buff_detector.cpp.o -c /home/awaken/Desktop/sp_vision_tutorial_26/lecture4/homework/tasks/buff_detector.cpp",
+  "file": "/home/awaken/Desktop/sp_vision_tutorial_26/lecture4/homework/tasks/buff_detector.cpp"
+},
+{
+  "directory": "/home/awaken/Desktop/sp_vision_tutorial_26/lecture4/homework/build/tasks",
+  "command": "/usr/bin/c++ -DOV_THREAD=OV_THREAD_TBB -D_GLIBCXX_USE_CXX11_ABI=1 -I/usr/include/eigen3 -I/usr/include/opencv4 -I/home/awaken/Desktop/sp_vision_tutorial_26/lecture4/homework -isystem /opt/intel/openvino_2024.6.0/runtime/include -Wno-error=deprecated-declarations -std=gnu++17 -o CMakeFiles/auto_buff.dir/yolo11_buff.cpp.o -c /home/awaken/Desktop/sp_vision_tutorial_26/lecture4/homework/tasks/yolo11_buff.cpp",
+  "file": "/home/awaken/Desktop/sp_vision_tutorial_26/lecture4/homework/tasks/yolo11_buff.cpp"
+},
+{
+  "directory": "/home/awaken/Desktop/sp_vision_tutorial_26/lecture4/homework/build/tasks",
+  "command": "/usr/bin/c++ -DOV_THREAD=OV_THREAD_TBB -D_GLIBCXX_USE_CXX11_ABI=1 -I/usr/include/eigen3 -I/usr/include/opencv4 -I/home/awaken/Desktop/sp_vision_tutorial_26/lecture4/homework -isystem /opt/intel/openvino_2024.6.0/runtime/include -Wno-error=deprecated-declarations -std=gnu++17 -o CMakeFiles/auto_buff.dir/buff_solver.cpp.o -c /home/awaken/Desktop/sp_vision_tutorial_26/lecture4/homework/tasks/buff_solver.cpp",
+  "file": "/home/awaken/Desktop/sp_vision_tutorial_26/lecture4/homework/tasks/buff_solver.cpp"
+},
+{
+  "directory": "/home/awaken/Desktop/sp_vision_tutorial_26/lecture4/homework/build/tools",
+  "command": "/usr/bin/c++  -I/usr/include/eigen3 -I/usr/include/opencv4 -I/home/awaken/Desktop/sp_vision_tutorial_26/lecture4/homework -std=gnu++17 -o CMakeFiles/tools.dir/img_tools.cpp.o -c /home/awaken/Desktop/sp_vision_tutorial_26/lecture4/homework/tools/img_tools.cpp",
+  "file": "/home/awaken/Desktop/sp_vision_tutorial_26/lecture4/homework/tools/img_tools.cpp"
+},
+{
+  "directory": "/home/awaken/Desktop/sp_vision_tutorial_26/lecture4/homework/build/tools",
+  "command": "/usr/bin/c++  -I/usr/include/eigen3 -I/usr/include/opencv4 -I/home/awaken/Desktop/sp_vision_tutorial_26/lecture4/homework -std=gnu++17 -o CMakeFiles/tools.dir/logger.cpp.o -c /home/awaken/Desktop/sp_vision_tutorial_26/lecture4/homework/tools/logger.cpp",
+  "file": "/home/awaken/Desktop/sp_vision_tutorial_26/lecture4/homework/tools/logger.cpp"
+},
+{
+  "directory": "/home/awaken/Desktop/sp_vision_tutorial_26/lecture4/homework/build/tools",
+  "command": "/usr/bin/c++  -I/usr/include/eigen3 -I/usr/include/opencv4 -I/home/awaken/Desktop/sp_vision_tutorial_26/lecture4/homework -std=gnu++17 -o CMakeFiles/tools.dir/plotter.cpp.o -c /home/awaken/Desktop/sp_vision_tutorial_26/lecture4/homework/tools/plotter.cpp",
+  "file": "/home/awaken/Desktop/sp_vision_tutorial_26/lecture4/homework/tools/plotter.cpp"
+}
+]

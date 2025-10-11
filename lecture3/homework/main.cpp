@@ -58,11 +58,11 @@ int main()
             if (!armors.empty()) {
                 std::string count_info = "Detected: " + std::to_string(armors.size()) + " armors";
                 tools::draw_text(img, count_info, cv::Point(10, 30),
-                               cv::Scalar(0, 255, 0), 0.7, 2);
+                               cv::Scalar(0, 255, 0), 3, 2);
             }
             
             // 显示图像
-            cv::resize(img, img, cv::Size(640, 480));
+            cv::resize(img, img, cv::Size(1280, 960));
             cv::imshow("Armor Detection", img);
             
             frame_count++;
