@@ -26,6 +26,9 @@ namespace auto_buff
         // 能量机关尺寸
         static constexpr float FAN_RADIUS = 150.0f;      // 符半径
         static constexpr float R_MARK_DISTANCE = 700.0f; // 符中心到R标的距离
+
+        //调整距离
+        
     };
 } // namespace auto_buff
 #endif // SOLVER_HPP

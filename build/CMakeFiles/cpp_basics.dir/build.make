@@ -73,29 +73,29 @@ CMakeFiles/cpp_basics.dir/part_1/cpp_basics.cpp.o: CMakeFiles/cpp_basics.dir/fla
 CMakeFiles/cpp_basics.dir/part_1/cpp_basics.cpp.o: /home/awaken/Desktop/sp_vision_tutorial_26/lecture2/part_1/cpp_basics.cpp
 CMakeFiles/cpp_basics.dir/part_1/cpp_basics.cpp.o: CMakeFiles/cpp_basics.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/awaken/Desktop/sp_vision_tutorial_26/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/cpp_basics.dir/part_1/cpp_basics.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cpp_basics.dir/part_1/cpp_basics.cpp.o -MF CMakeFiles/cpp_basics.dir/part_1/cpp_basics.cpp.o.d -o CMakeFiles/cpp_basics.dir/part_1/cpp_basics.cpp.o -c /home/awaken/Desktop/sp_vision_tutorial_26/lecture2/part_1/cpp_basics.cpp
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cpp_basics.dir/part_1/cpp_basics.cpp.o -MF CMakeFiles/cpp_basics.dir/part_1/cpp_basics.cpp.o.d -o CMakeFiles/cpp_basics.dir/part_1/cpp_basics.cpp.o -c /home/awaken/Desktop/sp_vision_tutorial_26/lecture2/part_1/cpp_basics.cpp
 
 CMakeFiles/cpp_basics.dir/part_1/cpp_basics.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cpp_basics.dir/part_1/cpp_basics.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/awaken/Desktop/sp_vision_tutorial_26/lecture2/part_1/cpp_basics.cpp > CMakeFiles/cpp_basics.dir/part_1/cpp_basics.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/awaken/Desktop/sp_vision_tutorial_26/lecture2/part_1/cpp_basics.cpp > CMakeFiles/cpp_basics.dir/part_1/cpp_basics.cpp.i
 
 CMakeFiles/cpp_basics.dir/part_1/cpp_basics.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cpp_basics.dir/part_1/cpp_basics.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/awaken/Desktop/sp_vision_tutorial_26/lecture2/part_1/cpp_basics.cpp -o CMakeFiles/cpp_basics.dir/part_1/cpp_basics.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/awaken/Desktop/sp_vision_tutorial_26/lecture2/part_1/cpp_basics.cpp -o CMakeFiles/cpp_basics.dir/part_1/cpp_basics.cpp.s
 
 CMakeFiles/cpp_basics.dir/part_1/tools.cpp.o: CMakeFiles/cpp_basics.dir/flags.make
 CMakeFiles/cpp_basics.dir/part_1/tools.cpp.o: /home/awaken/Desktop/sp_vision_tutorial_26/lecture2/part_1/tools.cpp
 CMakeFiles/cpp_basics.dir/part_1/tools.cpp.o: CMakeFiles/cpp_basics.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/awaken/Desktop/sp_vision_tutorial_26/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/cpp_basics.dir/part_1/tools.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cpp_basics.dir/part_1/tools.cpp.o -MF CMakeFiles/cpp_basics.dir/part_1/tools.cpp.o.d -o CMakeFiles/cpp_basics.dir/part_1/tools.cpp.o -c /home/awaken/Desktop/sp_vision_tutorial_26/lecture2/part_1/tools.cpp
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cpp_basics.dir/part_1/tools.cpp.o -MF CMakeFiles/cpp_basics.dir/part_1/tools.cpp.o.d -o CMakeFiles/cpp_basics.dir/part_1/tools.cpp.o -c /home/awaken/Desktop/sp_vision_tutorial_26/lecture2/part_1/tools.cpp
 
 CMakeFiles/cpp_basics.dir/part_1/tools.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cpp_basics.dir/part_1/tools.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/awaken/Desktop/sp_vision_tutorial_26/lecture2/part_1/tools.cpp > CMakeFiles/cpp_basics.dir/part_1/tools.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/awaken/Desktop/sp_vision_tutorial_26/lecture2/part_1/tools.cpp > CMakeFiles/cpp_basics.dir/part_1/tools.cpp.i
 
 CMakeFiles/cpp_basics.dir/part_1/tools.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cpp_basics.dir/part_1/tools.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/awaken/Desktop/sp_vision_tutorial_26/lecture2/part_1/tools.cpp -o CMakeFiles/cpp_basics.dir/part_1/tools.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/awaken/Desktop/sp_vision_tutorial_26/lecture2/part_1/tools.cpp -o CMakeFiles/cpp_basics.dir/part_1/tools.cpp.s
 
 # Object files for target cpp_basics
 cpp_basics_OBJECTS = \
