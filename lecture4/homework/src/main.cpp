@@ -10,13 +10,10 @@
 
 // 相机内参
 static const cv::Mat camera_matrix =
-    (cv::Mat_<double>(3, 3) << 1286.307063384126, 0, 645.34450819155256,
-     0, 1288.1400736562441, 483.6163720308021,
-     0, 0, 1);
+    (cv::Mat_<double>(3, 3) << 1775.1300101814929, 0, 710.22041588791421, 0, 1777.9427175568535, 599.38373307949621, 0, 0, 1);
 // 畸变系数
 static const cv::Mat distort_coeffs =
-    (cv::Mat_<double>(1, 5) << -0.47562935060124745, 0.21831745829617311, 
-     0.0004957613589406044, -0.00034617769548693592, 0);
+    (cv::Mat_<double>(1, 5) << -0.081907189655237952, 0.14019999270205855, -0.0012264127665053185, 0.0014292255962000792, 0);
 
 int main()
 {
@@ -123,10 +120,16 @@ int main()
 
                     // 发送数据到plotjuggler
                     if(fanblade_count == 0) { // 只记录第一个扇叶的数据
-                        data["fan_center_x"] = solution.fan_center.x;
-                        data["fan_center_y"] = solution.fan_center.y;
-                        data["rotation_center_x"] = solution.rotation_center.x;
-                        data["rotation_center_y"] = solution.rotation_center.y;
+                        // data["fan_center_x"] = solution.fan_center.x;
+                        // data["fan_center_y"] = solution.fan_center.y;
+                        // data["rotation_center_x"] = solution.rotation_center.x;
+                        // data["rotation_center_y"] = solution.rotation_center.y;
+                        data["fan_center3d_x"] = solution.fan_center3d.x;
+                        data["fan_center3d_y"] = solution.fan_center3d.y;
+                        data["fan_center3d_z"] = solution.fan_center3d.z;
+                        data["rotation_center3d_x"] = solution.rotation_center3d.x;
+                        data["rotation_center3d_y"] = solution.rotation_center3d.y; 
+                        data["rotation_center3d_z"] = solution.rotation_center3d.z;
                         data["timestamp"] = std::chrono::duration_cast<std::chrono::milliseconds>(
                             timestamp.time_since_epoch()).count();
                     }

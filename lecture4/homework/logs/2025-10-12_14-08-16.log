@@ -1,0 +1,9 @@
+[2025-10-12 14:08:16.482] [info] HikRobot's daemon thread started.
+[2025-10-12 14:08:17.409] [info] HikRobot's capture thread started.
+[2025-10-12 14:08:40.516] [warning] MV_CC_GetImageBuffer failed: 0x80000007
+[2025-10-12 14:08:40.516] [info] HikRobot's capture thread stopped.
+[2025-10-12 14:08:40.781] [info] Reset usb successfully :)
+[2025-10-12 14:08:41.270] [info] HikRobot's capture thread started.
+[2025-10-12 14:12:21.259] [info] HikRobot's capture thread stopped.
+[2025-10-12 14:12:21.291] [info] HikRobot's daemon thread stopped.
+[2025-10-12 14:12:21.295] [info] HikRobot destructed.

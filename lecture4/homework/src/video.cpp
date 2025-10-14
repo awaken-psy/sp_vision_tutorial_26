@@ -51,7 +51,6 @@ int main()
         // 5. 创建显示图像的副本，用于绘制检测结果
         cv::Mat display_img = img.clone();
         nlohmann::json data; // 创建JSON对象存储数据
-    
 
         // 6. 遍历所有检测到的扇叶，在图像上绘制可视化信息
         int fanblade_count = 0;
@@ -120,14 +119,21 @@ int main()
                          cv::Scalar(255, 255, 0), 2);
 
                 // 发送数据到plotjuggler
-                if(fanblade_count == 0) { // 只记录第一个扇叶的数据
-                data["fan_center_x"] = solution.fan_center.x;
-                data["fan_center_y"] = solution.fan_center.y;
-                data["rotation_center_x"] = solution.rotation_center.x;
-                data["rotation_center_y"] = solution.rotation_center.y;
+                if (fanblade_count == 0)
+                { // 只记录第一个扇叶的数据
+                    // data["fan_center_x"] = solution.fan_center.x;
+                    // data["fan_center_y"] = solution.fan_center.y;
+                    // data["rotation_center_x"] = solution.rotation_center.x;
+                    // data["rotation_center_y"] = solution.rotation_center.y;
+                    data["fan_center3d_x"] = solution.fan_center3d.x;
+                    data["fan_center3d_y"] = solution.fan_center3d.y;
+                    data["fan_center3d_z"] = solution.fan_center3d.z;
+                    data["rotation_center3d_x"] = solution.rotation_center3d.x;
+                    data["rotation_center3d_y"] = solution.rotation_center3d.y;
+                    data["rotation_center3d_z"] = solution.rotation_center3d.z;
                 }
             }
-            
+
             fanblade_count++;
         }
 
@@ -135,7 +141,6 @@ int main()
         cv::resize(display_img, display_img, {}, 0.8, 0.8); // 缩放图像到80%大小
         cv::imshow("Detection Results", display_img);       // 显示处理后的图像
         plotter.plot(data);
-        
 
         if (cv::waitKey(30) == 27)
         {
