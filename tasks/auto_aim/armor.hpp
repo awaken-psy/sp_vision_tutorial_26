@@ -96,7 +96,7 @@ struct Armor
 {
   Color color;                // 装甲板颜色
   Lightbar left, right;       // 左右灯条（原注释：used to be const）
-  cv::Point2f center;         // 中心点（注意：不是对角线交点，不能作为实际中心！）
+  cv::Point2f center;         // 中心点（注意：不是对角线交点，不能作为实际中心！）//Question
   cv::Point2f center_norm;    // 归一化坐标
   std::vector<cv::Point2f> points;  // 装甲板角点
 
