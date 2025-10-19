@@ -43,7 +43,6 @@ int main(int argc, char * argv[])
   cv::Mat img;                              // 存储相机图像
   std::chrono::steady_clock::time_point img_timestamp;  // 图像时间戳
   Eigen::Quaterniond gimbal_quat;           // 存储云台姿态四元数
-  std::chrono::steady_clock::time_point quat_timestamp; // 四元数时间戳
 
   while (!exiter.exit()) {
     // Your code start

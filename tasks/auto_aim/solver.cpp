@@ -51,39 +51,72 @@ void Solver::set_R_gimbal2world(const Eigen::Quaterniond & q)
   R_gimbal2world_ = R_gimbal2imubody_.transpose() * R_imubody2imuabs * R_gimbal2imubody_;
 }
 
-//solvePnP（获得姿态）
+// solvePnP姿态解算函数
+// 通过2D-3D点对应关系求解装甲板在空间中的位置和姿态
 void Solver::solve(Armor & armor) const
 {
+  // 根据装甲板类型选择对应的3D参考点（大装甲板或小装甲板）
+  // BIG_ARMOR_POINTS和SMALL_ARMOR_POINTS分别是大小装甲板的3D角点坐标
   const auto & object_points =
     (armor.type == ArmorType::big) ? BIG_ARMOR_POINTS : SMALL_ARMOR_POINTS;
 
-  cv::Vec3d rvec, tvec;
+  // 使用solvePnP求解旋转向量和平移向量
+  cv::Vec3d rvec, tvec;  // 旋转向量(rvec)和平移向量(tvec)
   cv::solvePnP(
-    object_points, armor.points, camera_matrix_, distort_coeffs_, rvec, tvec, false,
-    cv::SOLVEPNP_IPPE);
+    object_points,     // 3D对象点（世界坐标系中的装甲板角点）
+    armor.points,      // 2D图像点（图像坐标系中检测到的装甲板角点）
+    camera_matrix_,    // 相机内参矩阵
+    distort_coeffs_,   // 相机畸变系数
+    rvec, tvec,        // 输出的旋转向量和平移向量
+    false,             // 不使用初始估计值
+    cv::SOLVEPNP_IPPE  // 使用IPPE算法（适用于平面对象姿态估计）
+  );
 
+  // 将平移向量从OpenCV格式转换为Eigen格式，得到装甲板在相机坐标系中的3D坐标
   Eigen::Vector3d xyz_in_camera;
   cv::cv2eigen(tvec, xyz_in_camera);
+
+  // 坐标变换：从相机坐标系转换到云台坐标系
+  // 使用相机到云台的旋转矩阵和平移向量进行坐标系变换
   armor.xyz_in_gimbal = R_camera2gimbal_ * xyz_in_camera + t_camera2gimbal_;
+
+  // 坐标变换：从云台坐标系转换到世界坐标系
+  // 使用云台到世界的旋转矩阵进行坐标系变换
   armor.xyz_in_world = R_gimbal2world_ * armor.xyz_in_gimbal;
 
+  // 将旋转向量转换为旋转矩阵（Rodrigues变换）
   cv::Mat rmat;
-  cv::Rodrigues(rvec, rmat);
+  cv::Rodrigues(rvec, rmat);  // 将旋转向量转换为3x3旋转矩阵
+
+  // 将旋转矩阵从OpenCV格式转换为Eigen格式
   Eigen::Matrix3d R_armor2camera;
   cv::cv2eigen(rmat, R_armor2camera);
-  Eigen::Matrix3d R_armor2gimbal = R_camera2gimbal_ * R_armor2camera;
-  Eigen::Matrix3d R_armor2world = R_gimbal2world_ * R_armor2gimbal;
-  armor.ypr_in_gimbal = tools::eulers(R_armor2gimbal, 2, 1, 0);
-  armor.ypr_in_world = tools::eulers(R_armor2world, 2, 1, 0);
 
+  // 坐标变换：从装甲板坐标系到相机坐标系 -> 从装甲板坐标系到云台坐标系
+  Eigen::Matrix3d R_armor2gimbal = R_camera2gimbal_ * R_armor2camera;
+
+  // 坐标变换：从装甲板坐标系到云台坐标系 -> 从装甲板坐标系到世界坐标系
+  Eigen::Matrix3d R_armor2world = R_gimbal2world_ * R_armor2gimbal;
+
+  // 将旋转矩阵转换为欧拉角（ZYX顺序：偏航-俯仰-横滚）
+  // 参数2,1,0表示旋转顺序：先绕Z轴(2)，再绕Y轴(1)，最后绕X轴(0)
+  armor.ypr_in_gimbal = tools::eulers(R_armor2gimbal, 2, 1, 0);  // 在云台坐标系中的欧拉角
+  armor.ypr_in_world = tools::eulers(R_armor2world, 2, 1, 0);    // 在世界坐标系中的欧拉角
+
+  // 将直角坐标转换为球坐标（偏航-俯仰-距离）
+  // ypd: yaw(偏航角), pitch(俯仰角), distance(距离)
   armor.ypd_in_world = tools::xyz2ypd(armor.xyz_in_world);
 
-  // 平衡不做yaw优化，因为pitch假设不成立
+  // 特殊处理：对于平衡步兵的特定装甲板（大三、四、五）不做yaw优化
+  // 原因：平衡步兵的pitch轴假设不成立，这些装甲板可能处于倾斜状态
+  // 如果对这些装甲板进行yaw优化，可能会导致错误的姿态估计
   auto is_balance = (armor.type == ArmorType::big) &&
                     (armor.name == ArmorName::three || armor.name == ArmorName::four ||
                      armor.name == ArmorName::five);
-  if (is_balance) return;
+  if (is_balance) return;  // 直接返回，跳过yaw优化
 
+  // 对于其他装甲板，进行yaw角优化以提高姿态估计精度
+  // optimize_yaw函数会进一步优化装甲板的偏航角估计
   optimize_yaw(armor);
 }
 

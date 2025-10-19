@@ -29,8 +29,11 @@ public:
   Target() = default;
   // 构造函数：通过第一个检测到的装甲板初始化目标
   Target(
-    const Armor & armor, std::chrono::steady_clock::time_point t, Eigen::VectorXd P0_dig, 
-    double radius = 0.2, int armor_num = 4);
+    const Armor & armor,                      // 第一个检测到的装甲板，用于初始化目标状态
+    std::chrono::steady_clock::time_point t,  // 当前时间戳，用于初始化滤波器时间
+    Eigen::VectorXd P0_dig,                   // 初始状态协方差矩阵的对角线元素
+    double radius = 0.2,                      // 机器人装甲板的分布半径（单位：米），默认0.2m
+    int armor_num = 4);                       // 机器人的装甲板数量，默认4个
 
   // 预测函数：根据时间点预测目标状态
   void predict(std::chrono::steady_clock::time_point t);
